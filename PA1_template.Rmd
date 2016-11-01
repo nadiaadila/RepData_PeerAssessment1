@@ -16,7 +16,7 @@ sum_data <- aggregate(rawData$steps, by=list(rawData$date), FUN=sum, na.rm=TRUE)
 names(sum_data) <- c("date", "total")
 ```
 
-2. Make a histogram of the total number of steps taken each day.  
+2.Make a histogram of the total number of steps taken each day.  
 ```{r echo = TRUE}
 hist(sum_data$total, 
      main="Total Step Taken Each Day",
@@ -51,7 +51,7 @@ plot(meanData$interval,
      main="Time-series of the average number of steps per intervals")
 ```
 
-2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
+2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
 ```{r}
 #We find the position of the maximum mean
 maxPosition <- which(meanData$mean == max(meanData$mean))
@@ -60,12 +60,12 @@ maxInterval <- meanData[maxPosition, 1]
 ```
 
 ##Imputing missing values
-1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
+1.Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 ```{r}
 NA_count <- sum(is.na(rawData$steps))
 ```
 
-2. Devise a strategy for filling in all of the missing values in the dataset.
+2.Devise a strategy for filling in all of the missing values in the dataset.
 ```{r}
 # Find the NA positions
 NApos <- which(is.na(rawData$steps))
@@ -76,12 +76,12 @@ meanVec <- rep(mean(rawData$steps, na.rm=TRUE), times=length(NApos))
 head(meanVec)
 ```
 
-3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
+3.Create a new dataset that is equal to the original dataset but with the missing data filled in.
 ```{r}
 rawData[NApos, "steps"] <- meanVec #replace NA with mean value
 ```
 
-4. Make a histogram of the total number of steps taken each day
+4.Make a histogram of the total number of steps taken each day
 ```{r echo = TRUE}
 # Calculate and report the mean and median total number of steps taken per day
 sumData <- aggregate(rawData$steps, by=list(rawData$date), FUN=sum)
@@ -120,7 +120,7 @@ rawData$day <- sapply(rawData$date, FUN=weekday.or.weekend)
 ```
 
 
-2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
+2.Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 ```{r}
 library(ggplot2)
 
