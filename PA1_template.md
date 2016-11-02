@@ -30,7 +30,6 @@ missing values in the dataset.
          col="green",
          ylim=c(0,40))
 
-![](PA1_template_files/figure/unnamed-chunk-2-1.png)
 [plot of chunk unnamed-chunk-1](figure/unnamed-chunk-2-1.png)
 
 
@@ -66,7 +65,7 @@ What is the average daily activity pattern?
          ylab="Average num of Steps", 
          main="Time-series of the average number of steps per intervals")
 
-![](PA1_template_files/figure/unnamed-chunk-4-1.png)
+![](figure/unnamed-chunk-4-1.png)
 
 1.  Which 5-minute interval, on average across all the days in the
     dataset, contains the maximum number of steps?
