@@ -76,6 +76,9 @@ What is the average daily activity pattern?
     maxPosition <- which(meanData$mean == max(meanData$mean))
     # We lookup the value of interval at this position
     maxInterval <- meanData[maxPosition, 1]
+    maxInterval
+
+    ## [1] 835
 
 Imputing missing values
 -----------------------
