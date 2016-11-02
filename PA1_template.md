@@ -172,3 +172,4 @@ Are there differences in activity patterns between weekdays and weekends?
       xlab("Interval") + ylab("Number of steps") 
 
 ![](PA1_template_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+a
