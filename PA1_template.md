@@ -31,6 +31,8 @@ missing values in the dataset.
          ylim=c(0,40))
 
 ![](PA1_template_files/figure/unnamed-chunk-2-1.png)
+[plot of chunk unnamed-chunk-1](figure/unnamed-chunk-2-1.png)
+
 
 3.Calculate and report the mean and median of the total number of steps
 taken per day
