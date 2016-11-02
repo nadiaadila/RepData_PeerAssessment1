@@ -30,7 +30,7 @@ missing values in the dataset.
          col="green",
          ylim=c(0,40))
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](PA1_template_files/figure/unnamed-chunk-2-1.png)
 
 3.Calculate and report the mean and median of the total number of steps
 taken per day
@@ -64,7 +64,7 @@ What is the average daily activity pattern?
          ylab="Average num of Steps", 
          main="Time-series of the average number of steps per intervals")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](PA1_template_files/figure/unnamed-chunk-4-1.png)
 
 1.  Which 5-minute interval, on average across all the days in the
     dataset, contains the maximum number of steps?
@@ -126,7 +126,7 @@ Imputing missing values
          ylim=c(0,40),
          main="Total number of steps taken each day")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](PA1_template_files/figure/unnamed-chunk-9-1.png)
 
     mean(sumData$total)
 
@@ -171,5 +171,4 @@ Are there differences in activity patterns between weekdays and weekends?
     ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) +
       xlab("Interval") + ylab("Number of steps") 
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-11-1.png)
-a
+![](PA1_template_files/figure/unnamed-chunk-11-1.png)
